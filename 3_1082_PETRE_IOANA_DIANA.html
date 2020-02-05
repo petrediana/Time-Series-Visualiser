@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <title>Time Series Visualiser</title>
+
+    <link rel="stylesheet" type="text/css" href="3_1082_PETRE_IOANA_DIANA.css"> <!-- load my css -->
+    <script type="text/javascript" charset="utf-8" src="3_1082_PETRE_IOANA_DIANA.js"></script> <!-- load my scripts -->
+    <link rel="stylesheet" href="lib\bootstrap\css\bootstrap.css">
+</head>
+
+<body>
+    <div>
+        <h6>CREATE A HISTOGRAM BY CHOOSING A COUNTRY AND A CHARACTERISTIC</h6>
+        <div class="visual-components-1">
+            <label for="characteristics">Enter a Country and a characteristic:</label>
+            <select name="selectCountries" id="selectCountries"></select>
+
+            <select name="selectCharacteristic2" id="selectCharacteristic2">
+                <option value="PIB">GDP</option>
+                <option value="INT">Internet speed</option>
+                <option value="POP">Population</option>
+            </select>
+
+            <input type="button" value="Create histogram" onClick="createHistogramBtn()">
+            <input type="button" value="Delete histogram" onClick="clearCanvas(1)">
+        </div>
+
+        <canvas id="histogramCanvas" width="910" height="210"></canvas>
+    </div>
+
+    <hr>
+
+    <div>
+        <h6>CREATE A BUBBLE CHART BY CHOOSING A YEAR THE CHARACTERISTICS ARE: GDP, INTERNET SPEED, POPULATION</h6>
+        <div class="visual-components-1">
+            <label for="yearAndCharacteristics">Enter a year:</label>
+            <select name="selectYears" id="selectYears"></select>
+
+            <input type="button" value="Create bubble chart" onClick="createBubbleChartBtn()">
+            <input type="button" value="Delete bubble chart" onClick="clearCanvas(2)">
+        </div>
+
+        <canvas id="bubbleChartCanvas" width="500" height="400"></canvas>
+    </div>
+
+    <hr>
+    <div>
+        <h6>BUBBLE CHART ANIMATION</h6>
+        <div class = "visual-components-1">
+            <input type="button" value="Start animation" onClick="startBubbleChartAnimation()">
+            <input type="button" value="Delete bubble chart" onClick="clearCanvas(3)">
+            <label for="showCurrentYear">Current year: </label>
+            <label for="displayCurrentAnimationYear" id="displayCurrentAnimationYear"></label>
+        </div>
+
+        <canvas id="bubbleChartAnimationCanvas" width="600" height="600"></canvas>
+    </div>
+    <hr>
+
+    <div>
+        <h6>CHOOSE A YEAR TO SEE THE DATA</h6>
+        <div class = "visual-components-1">
+            <label for="yearAndCharacteristics">Enter a year:</label>
+            <select name="selectYearsForTable" id="selectYearsForTable"></select>
+
+            <input type="button" value="See data" onclick="createDataTable()">
+            <input type="button" value="Delete table values" onClick="clearCanvas(4)">
+        </div>
+        <table id="dataTable" >
+            <thead>
+                <tr>
+                    <th>Countries</th>
+                    <th>GDP</th>
+                    <th>Internet speed</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+</body>
+</html>

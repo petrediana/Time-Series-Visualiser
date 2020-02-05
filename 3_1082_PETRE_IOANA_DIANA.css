@@ -1,0 +1,65 @@
+#histogramCanvas {
+    display: block;
+    margin: auto;
+}
+
+#bubbleChartCanvas {
+    display: block;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#bubbleChartAnimationCanvas {
+    display: block;
+    border: 1px black;
+    margin: auto;
+}
+
+div>h6 {
+    display: block;
+    text-align: center;
+}
+
+.visual-components-1 {
+    display: block;
+    background-color: aquamarine;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+#dataTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #dataTable td, #dataTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #dataTable tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #dataTable tr:hover {
+        background-color: #ddd;
+    }
+
+    #dataTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    }
